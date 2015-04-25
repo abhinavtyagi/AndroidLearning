@@ -35,7 +35,7 @@ public class MyActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            return true; // git test
         }
 
         return super.onOptionsItemSelected(item);
