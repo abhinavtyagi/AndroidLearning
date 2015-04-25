@@ -3,4 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/id_textView"
+        android:hint="@string/title_TextView_display_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_TextView_display_message"
+     />
 </LinearLayout>

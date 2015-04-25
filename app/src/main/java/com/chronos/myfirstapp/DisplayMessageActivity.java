@@ -17,21 +17,32 @@ import android.widget.TextView;
  */
 public class DisplayMessageActivity extends ActionBarActivity {
 
+ //   private static final boolean createDynamicView = true;
+    private static final boolean createDynamicView = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
         // get message from intent of current activity
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(MyActivity.m_EXTRA_MESSAGE);
 
-        // Create a view, set the attributes
-        TextView view = new TextView(this);
-        view.setText(message);
-        view.setTextSize(40);
+        TextView view;
+        if(createDynamicView) {
+            // Create a view, set the attributes
+            view = new TextView(this);
+            view.setText(message);
+            view.setTextSize(40);
+            setContentView(view);
+        }
+        else {
+            view = (TextView) findViewById(R.id.id_textView);
+            view.setText(message);
+            view.setTextSize(80);
+        }
 
         // set the text view as the activity layout
-        setContentView(view);
     }
 
     @Override

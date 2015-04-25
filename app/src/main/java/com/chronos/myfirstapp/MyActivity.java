@@ -11,11 +11,17 @@ import android.widget.EditText;
 
 public class MyActivity extends ActionBarActivity {
 
-    public final static String EXTRA_MESSAGE = "com.chronos.myfirstapp.MESSAGE";
+    public final static String m_EXTRA_MESSAGE = "";
+    public static String m_lastValue = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_my);
+        if(!m_lastValue.isEmpty()) {
+            EditText editText = (EditText) findViewById(R.id.edit_message);
+            editText.setText(m_lastValue);
+        }
     }
 
 
@@ -44,7 +50,8 @@ public class MyActivity extends ActionBarActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText)findViewById(R.id.edit_message);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(m_EXTRA_MESSAGE, message);
+        m_lastValue = message;
         startActivity(intent);
     }
 }
