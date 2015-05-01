@@ -1,7 +1,6 @@
 package com.chronos.myfirstapp;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.Notification;
 import android.content.Intent;
@@ -16,7 +15,7 @@ import android.widget.TextView;
 /**
  * Created by abhinavt on 4/25/2015.
  */
-public class DisplayMessageActivity extends Activity {
+public class DisplayMessageActivity extends ActionBarActivity {
 
  //   private static final boolean createDynamicView = true;
     private static final boolean createDynamicView = false;
