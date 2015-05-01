@@ -4,7 +4,8 @@
     <string name="edit_message">Enter a messagew</string>
     <string name="edit_message2">Enter a message2</string>
     <string name="button_send">Send</string>
-    <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_display_message">MyMsg</string>
     <string name="title_TextView_display_message">TextViewMsg</string>
     <string name="string_editText_default">Edit_Default</string>
+    <string name="action_search">Search</string>
 </resources>
