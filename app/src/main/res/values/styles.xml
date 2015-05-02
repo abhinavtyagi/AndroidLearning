@@ -5,4 +5,25 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="MyButtonStyle" parent="android:Widget.Button">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="MyButtonStyle.Green">
+        <item name="android:background">@drawable/ic_green_button</item>
+    </style>
+
+    <style name="MyButtonStyle.Orange">
+        <item name="android:background">@drawable/ic_orange_button</item>
+    </style>
+
+    <style name="MyButtonStyle.Orange.selector">
+        <item name="android:background">@drawable/button_selector_style</item>
+    </style>
+
+    <style name="MyButtonStyle.Orange.Gradient">
+        <item name="android:background">@drawable/my_button_gradient</item>
+    </style>
+
+
 </resources>
